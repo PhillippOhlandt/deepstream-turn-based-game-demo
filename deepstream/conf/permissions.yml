@@ -43,4 +43,4 @@ rpc:
 
   "turn":
       provide: user.data.role === "backend"
-      request: data.me.username === user.data.username && data.me.role === user.data.role &&  _('session/' + data.gameID).nextTurn.indexOf(user.id) > -1
+      request: data.me.username === user.data.username && data.me.role === user.data.role && _('session/' + data.gameID).nextTurn.indexOf(user.id) > -1
