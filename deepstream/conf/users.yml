@@ -1,0 +1,47 @@
+userA:
+  password: "rCOSZxJrgze2AZdVQh12c6ErDMOG0M+Rx5Yu7S5d91c=GS4SbTQYmoaGwjm2shEobg=="
+  serverData:
+    username: "userA"
+    role: "user"
+  clientData:
+    username: "userA"
+    role: "user"
+userB:
+  password: "rCOSZxJrgze2AZdVQh12c6ErDMOG0M+Rx5Yu7S5d91c=GS4SbTQYmoaGwjm2shEobg=="
+  serverData:
+    username: "userB"
+    role: "user"
+  clientData:
+    username: "userB"
+    role: "user"
+userC:
+  password: "rCOSZxJrgze2AZdVQh12c6ErDMOG0M+Rx5Yu7S5d91c=GS4SbTQYmoaGwjm2shEobg=="
+  serverData:
+    username: "userC"
+    role: "user"
+  clientData:
+    username: "userC"
+    role: "user"
+userD:
+  password: "rCOSZxJrgze2AZdVQh12c6ErDMOG0M+Rx5Yu7S5d91c=GS4SbTQYmoaGwjm2shEobg=="
+  serverData:
+    username: "userD"
+    role: "user"
+  clientData:
+    username: "userD"
+    role: "user"
+userE:
+  password: "rCOSZxJrgze2AZdVQh12c6ErDMOG0M+Rx5Yu7S5d91c=GS4SbTQYmoaGwjm2shEobg=="
+  serverData:
+    username: "userE"
+    role: "user"
+  clientData:
+    username: "userE"
+    role: "user"
+backend:
+  password: "rCOSZxJrgze2AZdVQh12c6ErDMOG0M+Rx5Yu7S5d91c=GS4SbTQYmoaGwjm2shEobg=="
+  serverData:
+    role: "backend"
+  clientData:
+    username: "backend"
+    role: "backend"

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DS Turn Based Game Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.js"></script>
+    <script src="/httpVueLoader.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/deepstream.io-client-js/2.1.1/deepstream.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <login v-if="!loggedIn"></login>
+
+                <div v-else>
+
+                    <div v-if="!playingGame">
+                        <join-game></join-game>
+                        <create-game></create-game>
+                    </div>
+
+                    <game v-else :gameid="joinedGame"></game>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='app.js'></script>
+</body>
+</html>

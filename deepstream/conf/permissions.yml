@@ -1,0 +1,46 @@
+presence:
+  "*":
+    allow: true
+record:
+  "*":
+    create: false
+    write: false
+    read: false
+    delete: false
+    listen: false
+
+  "session/$gameID":
+    create: user.data.role === "backend"
+    write: user.data.role === "backend"
+    read: user.data.role === "backend" || _('session/' + $gameID).players.indexOf(user.id) > -1
+    delete: false
+    listen: false
+event:
+  "*":
+    publish: false
+    subscribe: false
+    listen: false
+rpc:
+  "*":
+    provide: false
+    request: false
+
+  "get-game-types":
+      provide: user.data.role === "backend"
+      request: data.me.username === user.data.username && data.me.role === user.data.role
+
+  "create-game":
+    provide: user.data.role === "backend"
+    request: data.me.username === user.data.username && data.me.role === user.data.role
+
+  "join-game":
+      provide: user.data.role === "backend"
+      request: data.me.username === user.data.username && data.me.role === user.data.role
+
+  "leave-game":
+      provide: user.data.role === "backend"
+      request: data.me.username === user.data.username && data.me.role === user.data.role
+
+  "turn":
+      provide: user.data.role === "backend"
+      request: data.me.username === user.data.username && data.me.role === user.data.role &&  _('session/' + data.gameID).nextTurn.indexOf(user.id) > -1

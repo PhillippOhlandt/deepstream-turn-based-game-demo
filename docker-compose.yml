@@ -1,0 +1,26 @@
+version: '2'
+services:
+    deepstream:
+        image: deepstreamio/deepstream.io:2.1.2
+        ports:
+            - "6220:6020"
+        volumes:
+            - ./deepstream/conf:/etc/deepstream
+    gameprovider:
+        image: node:6.7-slim
+        volumes:
+            - ./gameprovider:/opt
+        environment:
+            - DEEPSTREAM_HOST=deepstream
+            - DEEPSTREAM_PORT=6020
+        depends_on:
+            - deepstream
+        command: node /opt/index.js
+    application:
+        image: nginx:latest
+        ports:
+            - "8088:80"
+        volumes:
+            - ./frontend:/usr/share/nginx/html
+        depends_on:
+            - gameprovider
